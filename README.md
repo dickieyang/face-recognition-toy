@@ -1,7 +1,7 @@
 # face-recognition-toy
 ## Introduce
-> This is a practice project for what I learning,About two months ago,Some thought through my mind and I realized I should do something I interested.So I choose a direction `AI` and looking for some materials.
-> thanks for god,I first found a blog from network [here](https://www.cnblogs.com/subconscious/p/6240151.html). Then I begin learn from [coursera](https://www.coursera.org/learn/machine-learning) which course 
+> This is a practice project for what I learning,About two months ago,Some thoughts through my mind and realized should do something I am interested in.So I choose a direction `AI` and looking for some materials.
+> thanks for god,I first found a blog from network [here](https://www.cnblogs.com/subconscious/p/6240151.html). Then I begin learn from [Coursera](https://www.coursera.org/learn/machine-learning) which course 
 > teach by `Andrew Ng`.After finished the course,I do it now.
 
 ## Dev environment
@@ -13,15 +13,15 @@
 ## Settings
 
 ### Install openCV
-I use brew to install it,and it may take a few times to build.
+I Use brew to install it,and it may take a few times to build.
 
-> 1 . update your brew to latest version.
+> 1.Update your brew to latest version.
 >
-> 2.`brew edit opencv`
+> 2.Enter `brew edit opencv`
 >
 > 3.Change `-BUILD_opencv_java=OFF` to ``-BUILD_opencv_java=ON``
 >
-> 4.`brew install --build-from-source opencv`
+> 4.Enter `brew install --build-from-source opencv`
 
 ### Config IDEA
 
@@ -41,7 +41,7 @@ Mat mat = new Mat(5, 10, CvType.CV_8UC1, new Scalar(0));
 System.out.println("Open CV Mat:" + mat);
 ```
 
-### Start project
+### Start exploring
 > This project is spring boot based.So you can run it as a jar file and no more config.
 
 1. The first thing is to execute the `db.sql` file under the resources directory.
