@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dickie.faceRecognition.mapper.PersonMapper">
+
+  <select id="findLabelByNameOrLatestLabel" resultType="int">
+    select ifnull(a.label,if(b.label is not null ,b.label + 1,1))
+    from (select max(label) label from person where name = #{name } limit 1) a,
+        (select max(label) label from person) b;
+  </select>
+
+  <select id="findByName" resultMap="BaseResultMap">
+    select <include refid="Base_Column_List"/>
+    from person where name = #{name} limit 1
+  </select>
+
+  <select id="findByLabel" resultMap="BaseResultMap">
+    select <include refid="Base_Column_List"/>
+    from person where label = #{label} limit 1
+  </select>
+
+</mapper>
